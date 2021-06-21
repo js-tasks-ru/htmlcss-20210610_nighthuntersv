@@ -10,6 +10,7 @@
     text-align: center;
     cursor: pointer;
     border: 1px solid var(--white);
+    transition: opacity 200ms ease-in-out, background 200ms ease-in-out;
 }
 
 .button:disabled {
