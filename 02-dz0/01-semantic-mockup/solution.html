@@ -1,4 +1,94 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <!-- Ваше решение -->
+    <head>
+        <meta charset="utf-8">
+        <title>Dz 0</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            html, body {
+                min-height: 100vh;
+            }
+
+            body {
+                display: flex;
+                flex-direction: column;
+                color: white;
+            }
+
+            header {
+                background: #7048E8;
+                text-align: center;
+            }
+
+            header h1 {
+                padding: 20px 0;
+
+            }
+
+            nav {
+                padding: 20px 0;
+                background: #F03D3E;
+            }
+
+            nav a {
+                margin: 0 20px;
+                color: white;
+            }
+
+            main {
+                flex-grow: 1;
+                background: deepskyblue;
+            }
+
+            article {
+                background: cadetblue;
+                padding: 20px;
+                margin: 20px;
+            }
+
+            article ul,
+            article ol {
+                margin: 20px;
+            }
+
+
+            footer {
+                background: darkorchid;
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Header</h1>
+            <nav>
+                <a href="">Nav 1</a>
+                <a href="">Nav 2</a>
+                <a href="">Nav 3</a>
+            </nav>
+        </header>
+        <main>
+            <article>
+                <h2>Article 1</h2>
+                <ul>
+                    <li>Оригинальная трилогия</li>
+                    <li>Трилогия приквелов</li>
+                    <li>Трилогия сиквелов</li>
+                </ul>
+            </article>
+            <article>
+                <h2>Article 2</h2>
+                <ol>
+                    <li>Эпизод IV &mdash; Новая надежда</li>
+                    <li>Эпизод V &mdash; Империя наносит ответный удар</li>
+                    <li>Эпизод VI &mdash; Возвращение джедая</li>
+                </ol>
+            </article>
+        </main>
+        <footer>Footer</footer>
+    </body>
 </html>
