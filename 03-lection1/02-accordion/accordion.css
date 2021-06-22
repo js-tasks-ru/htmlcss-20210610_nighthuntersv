@@ -9,22 +9,18 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
+    border-radius: 8px;
+    border: 1px solid var(--grey-3);
 }
 
 .accordion__item:last-child {
     margin-bottom: 0;
 }
 
-.accordion__item[open] {
-    border-radius: 8px;
-    border: 1px solid var(--grey-3);
-}
-
 .accordion__summary {
     display: flex;
     align-content: center;
     justify-content: space-between;
-    border: 1px solid var(--grey-3);
     border-radius: 8px;
     padding: 24px 32px;
     cursor: pointer;
@@ -50,7 +46,6 @@
 }
 
 .accordion__item[open] .accordion__summary {
-    border: none;
     border-radius: 8px 8px 0 0;
     padding-bottom: 16px;
 }
