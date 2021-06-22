@@ -2,10 +2,29 @@
 <!-- Страница с тултипом -->
 <html lang="ru">
     <head>
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
         <link rel="stylesheet" href="../../assets/css/main.css">
+        <link rel="stylesheet" href="../../assets/fonts/fonts.css">
         <link rel="stylesheet" href="./tooltip.css">
+        <style lang="css">
+            html, body {
+                height: 100%;
+            }
+
+            body {
+                display: flex;
+            }
+
+            .tooltip {
+                margin: auto;
+            }
+        </style>
+        <title>05-lection3/01-tooltip</title>
     </head>
     <body>
-
+        <div class="tooltip">
+            <div class="tooltip__icon"></div>
+            <div class="tooltip__text">Helper Text</div>
+        </div>
     </body>
 </html>
