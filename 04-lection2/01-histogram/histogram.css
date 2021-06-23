@@ -34,23 +34,20 @@
 
 .histogram__view_all {
     margin-top: 3px;
-}
-
-.histogram__view_all a {
     font-family: 'Inter', sans-serif;
     color: var(--light-blue);
     text-decoration: none;
 }
 
-.histogram__view_all a:hover,
-.histogram__view_all a:active,
-.histogram__view_all a:focus {
+.histogram__view_all:hover,
+.histogram__view_all:active,
+.histogram__view_all:focus {
     color: var(--dark-blue);
 }
 
 .histogram__body {
-    margin: 20px 0 0 -1px;
-    height: 80px;
+    margin: 39px 0 0 -1px;
+    height: 50px;
     display: flex;
     align-items: flex-end;
 }
