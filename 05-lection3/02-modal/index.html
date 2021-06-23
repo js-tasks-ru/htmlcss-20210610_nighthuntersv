@@ -2,11 +2,37 @@
 <!-- Страница с модалкой -->
 <html lang="ru">
     <head>
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
         <link rel="stylesheet" href="../../assets/css/main.css">
+        <link rel="stylesheet" href="../../03-lection1/01-button/button.css">
+        <link rel="stylesheet" href="../../assets/fonts/fonts.css">
         <link rel="stylesheet" href="./modal.css">
+        <style lang="css">
+            html, body {
+                min-height: 100vh;
+            }
+
+            body {
+                display: flex;
+            }
+
+            body #modal-open {
+                margin: auto;
+            }
+        </style>
         <title>Modal</title>
     </head>
     <body>
+        <div id="modal-open" class="button button_primary">Open modal</div>
+        <div id="modal" class="modal">
+            <div class="modal__overflow"></div>
+            <div class="modal__body">
+                <div id="modal-close" class="modal__close"></div>
+                <div class="modal__container">
+                    Some content can be placed be here.
+                </div>
+            </div>
+        </div>
     </body>
     <script src="./index.js"></script> 
 </html>
