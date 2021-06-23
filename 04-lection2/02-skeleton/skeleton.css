@@ -7,13 +7,13 @@
     flex-direction: column;
 }
 
-.skeleton__top_area,
-.skeleton__bottom_area {
+.skeleton__top-area,
+.skeleton__bottom-area {
     display: flex;
     align-items: center;
 }
 
-.skeleton__bottom_area {
+.skeleton__bottom-area {
     margin-top: 16px;
     padding: 8px 0;
 }
@@ -47,4 +47,20 @@
 
 .skeleton__line:last-of-type {
     margin: 0;
+}
+
+.skeleton__line_w45 {
+    width: 45%;
+}
+
+.skeleton__line_w60 {
+    width: 60%;
+}
+
+.skeleton__line_w80 {
+    width: 80%;
+}
+
+.skeleton__line_w95 {
+    width: 95%;
 }
