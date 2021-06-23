@@ -2,7 +2,10 @@
 
 :root {
     --white: #ffffff;
-    --black: #212429;
+    --black-r: 33;
+    --black-g: 36;
+    --black-b: 41;
+    --black: rgb(var(--black-r), var(--black-g), var(--black-b));
     --pink: #F784AD;
     --purple: #7048E8;
     --dark-purple: #5028C6;
