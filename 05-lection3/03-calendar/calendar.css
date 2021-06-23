@@ -18,7 +18,7 @@
     color: var(--dark-grey-blue);
 }
 
-.calendar__body_wrapper {
+.calendar__body-wrapper {
     position: relative;
     padding-bottom: 100%;
 }
