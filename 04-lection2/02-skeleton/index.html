@@ -2,10 +2,32 @@
 <!-- Страница со скелетоном -->
 <html lang="ru">
     <head>
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
         <link rel="stylesheet" href="../../assets/css/main.css">
         <link rel="stylesheet" href="./skeleton.css">
+        <style lang="css">
+            body {
+                max-width: 50vw;
+                margin: auto;
+            }
+        </style>
+        <title>04-lection2/02-skeleton</title>
     </head>
     <body>
-
+        <div class="skeleton">
+            <div class="skeleton__top-area">
+                <div class="skeleton__avatar"></div>
+                <div class="skeleton__lines">
+                    <div class="skeleton__line skeleton__line_w45"></div>
+                    <div class="skeleton__line skeleton__line_w60"></div>
+                </div>
+            </div>
+            <div class="skeleton__bottom-area">
+                <div class="skeleton__lines">
+                    <div class="skeleton__line skeleton__line_w95"></div>
+                    <div class="skeleton__line skeleton__line_w80"></div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
