@@ -1,0 +1,28 @@
+.background-image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.background-image_forest {
+    background-image: url("public/forest_400.jpg");
+    padding-top: calc(100% * 9 / 16);
+}
+
+@media all and (min-width: 401px) {
+    .background-image_forest {
+        background-image: url("public/forest_768.jpg");
+    }
+}
+
+@media all and (min-width: 769px) {
+    .background-image_forest {
+        background-image: url("public/forest_1024.jpg");
+    }
+}
+
+@media all and (min-width: 1025px) {
+    .background-image_forest {
+        background-image: url("public/forest_2560.jpg");
+    }
+}
