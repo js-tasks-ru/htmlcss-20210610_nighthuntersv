@@ -2,10 +2,69 @@
 <!-- Страница с полем ввода -->
 <html lang="ru">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
         <link rel="stylesheet" href="../../assets/css/main.css">
+        <link rel="stylesheet" href="../../assets/fonts/fonts.css">
         <link rel="stylesheet" href="./input.css">
+        <title>07-lection5/04-input</title>
     </head>
     <body>
-
+        <label class="text-input">
+            <span class="text-input__label">Label</span>
+            <span class="text-input__wrapper">
+                <input type="text" class="text-input__input" placeholder="Placeholder">
+                <span class="text-input__states">
+                    <svg viewBox="0 0 24 24" class="text-input__state text-input__state_success">
+                        <use xlink:href="../../assets/images/sprite.svg#icon-check-circle"></use>
+                    </svg>
+                    <svg viewBox="0 0 24 24" class="text-input__state text-input__state_invalid">
+                        <use xlink:href="../../assets/images/sprite.svg#icon-alert-triangle"></use>
+                    </svg>
+                </span>
+            </span>
+        </label>
+        <label class="text-input">
+            <span class="text-input__label">Focus</span>
+            <span class="text-input__wrapper">
+                <input type="text" class="text-input__input" value="Filled Input">
+                <span class="text-input__states">
+                    <svg viewBox="0 0 24 24" class="text-input__state text-input__state_success">
+                        <use xlink:href="../../assets/images/sprite.svg#icon-check-circle"></use>
+                    </svg>
+                    <svg viewBox="0 0 24 24" class="text-input__state text-input__state_invalid">
+                        <use xlink:href="../../assets/images/sprite.svg#icon-alert-triangle"></use>
+                    </svg>
+                </span>
+            </span>
+        </label>
+        <label class="text-input text-input_success">
+            <span class="text-input__label">Success</span>
+            <span class="text-input__wrapper">
+                <input type="text" class="text-input__input" value="Success">
+                <span class="text-input__states">
+                    <svg viewBox="0 0 24 24" class="text-input__state text-input__state_success">
+                        <use xlink:href="../../assets/images/sprite.svg#icon-check-circle"></use>
+                    </svg>
+                    <svg viewBox="0 0 24 24" class="text-input__state text-input__state_invalid">
+                        <use xlink:href="../../assets/images/sprite.svg#icon-alert-triangle"></use>
+                    </svg>
+                </span>
+            </span>
+        </label>
+        <label class="text-input text-input_invalid">
+            <span class="text-input__label">Error</span>
+            <span class="text-input__wrapper">
+                <input type="text" class="text-input__input" value="Error">
+                <span class="text-input__states">
+                    <svg viewBox="0 0 24 24" class="text-input__state text-input__state_success">
+                        <use xlink:href="../../assets/images/sprite.svg#icon-check-circle"></use>
+                    </svg>
+                    <svg viewBox="0 0 24 24" class="text-input__state text-input__state_invalid">
+                        <use xlink:href="../../assets/images/sprite.svg#icon-alert-triangle"></use>
+                    </svg>
+                </span>
+            </span>
+        </label>
     </body>
 </html>
