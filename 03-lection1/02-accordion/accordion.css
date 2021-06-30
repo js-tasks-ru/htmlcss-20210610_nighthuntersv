@@ -37,12 +37,8 @@
     display: none;
 }
 
-.accordion__summary:after {
-    content: '';
-    display: block;
+.accordion__marker {
     width: 16px;
-    background: url("assets/images/marker.svg") no-repeat center;
-    background-size: contain;
 }
 
 .accordion__item[open] .accordion__summary {
@@ -50,7 +46,7 @@
     padding-bottom: 16px;
 }
 
-.accordion__item[open] .accordion__summary:after {
+.accordion__item[open] .accordion__marker {
     transform: rotate(180deg);
 }
 
