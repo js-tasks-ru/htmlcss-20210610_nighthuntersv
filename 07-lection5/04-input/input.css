@@ -36,6 +36,10 @@
     box-shadow: 0 1px 1px 0 rgba(var(--blue-shadow), .1);
 }
 
+.text-input__input:disabled {
+    color: var(--grey-3);
+}
+
 .text-input__input::placeholder {
     color: var(--grey-2);
 }
