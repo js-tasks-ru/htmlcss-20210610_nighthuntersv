@@ -6,6 +6,7 @@
 .radio__input {
     position: absolute;
     opacity: 0;
+    pointer-events: none;
 }
 
 .radio__label {
@@ -34,6 +35,7 @@
     border: 1px solid var(--grey-2);
     background-color: var(--white);
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 .radio__control::before {
@@ -55,6 +57,7 @@
 
 .radio__input:disabled ~ .radio__control {
     background-color: var(--grey-2);
+    pointer-events: none;
 }
 
 .radio__input:focus ~ .radio__control {
