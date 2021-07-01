@@ -2,10 +2,83 @@
 <!-- Страница с полем ввода -->
 <html lang="ru">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
         <link rel="stylesheet" href="../../assets/css/main.css">
+        <link rel="stylesheet" href="../../assets/fonts/fonts.css">
         <link rel="stylesheet" href="./input.css">
+        <title>07-lection5/04-input</title>
     </head>
     <body>
-
+        <label class="input">
+            <span class="input__label">Label</span>
+            <span class="input__wrapper">
+                <input type="text" class="input__input" placeholder="Placeholder">
+                <span class="input__states">
+                    <svg viewBox="0 0 24 24" class="input__state input__state_success">
+                        <use xlink:href="../../assets/images/sprite.svg#icon-check-circle"></use>
+                    </svg>
+                    <svg viewBox="0 0 24 24" class="input__state input__state_invalid">
+                        <use xlink:href="../../assets/images/sprite.svg#icon-alert-triangle"></use>
+                    </svg>
+                </span>
+            </span>
+        </label>
+        <label class="input">
+            <span class="input__label">Focus</span>
+            <span class="input__wrapper">
+                <input type="text" class="input__input" value="Filled Input">
+                <span class="input__states">
+                    <svg viewBox="0 0 24 24" class="input__state input__state_success">
+                        <use xlink:href="../../assets/images/sprite.svg#icon-check-circle"></use>
+                    </svg>
+                    <svg viewBox="0 0 24 24" class="input__state input__state_invalid">
+                        <use xlink:href="../../assets/images/sprite.svg#icon-alert-triangle"></use>
+                    </svg>
+                </span>
+            </span>
+        </label>
+        <label class="input input_success">
+            <span class="input__label">Success</span>
+            <span class="input__wrapper">
+                <input type="text" class="input__input" value="Success">
+                <span class="input__states">
+                    <svg viewBox="0 0 24 24" class="input__state input__state_success">
+                        <use xlink:href="../../assets/images/sprite.svg#icon-check-circle"></use>
+                    </svg>
+                    <svg viewBox="0 0 24 24" class="input__state input__state_invalid">
+                        <use xlink:href="../../assets/images/sprite.svg#icon-alert-triangle"></use>
+                    </svg>
+                </span>
+            </span>
+        </label>
+        <label class="input input_invalid">
+            <span class="input__label">Error</span>
+            <span class="input__wrapper">
+                <input type="text" class="input__input" value="Error">
+                <span class="input__states">
+                    <svg viewBox="0 0 24 24" class="input__state input__state_success">
+                        <use xlink:href="../../assets/images/sprite.svg#icon-check-circle"></use>
+                    </svg>
+                    <svg viewBox="0 0 24 24" class="input__state input__state_invalid">
+                        <use xlink:href="../../assets/images/sprite.svg#icon-alert-triangle"></use>
+                    </svg>
+                </span>
+            </span>
+        </label>
+        <label class="input input_disabled">
+            <span class="input__label">Disabled</span>
+            <span class="input__wrapper">
+                <input type="text" class="input__input" value="Disabled" disabled>
+                <span class="input__states">
+                    <svg viewBox="0 0 24 24" class="input__state input__state_success">
+                        <use xlink:href="../../assets/images/sprite.svg#icon-check-circle"></use>
+                    </svg>
+                    <svg viewBox="0 0 24 24" class="input__state input__state_invalid">
+                        <use xlink:href="../../assets/images/sprite.svg#icon-alert-triangle"></use>
+                    </svg>
+                </span>
+            </span>
+        </label>
     </body>
 </html>
