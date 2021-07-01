@@ -23,7 +23,8 @@
     color: var(--grey-2);
 }
 
-.radio__input:focus ~ .radio__label {
+.radio__input:focus ~ .radio__label,
+.radio__control:active ~ .radio__label {
     text-decoration: underline;
 }
 
@@ -60,6 +61,7 @@
     pointer-events: none;
 }
 
-.radio__input:focus ~ .radio__control {
+.radio__input:focus ~ .radio__control,
+.radio__control:active {
     box-shadow: 0 .25rem .5rem rgba(var(--black-r), var(--black-g), var(--black-b), 0.2);
 }
