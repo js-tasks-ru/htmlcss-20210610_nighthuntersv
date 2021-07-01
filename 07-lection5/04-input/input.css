@@ -1,9 +1,9 @@
-.text-input {
+.input {
     display: inline-flex;
     flex-direction: column;
 }
 
-.text-input__label {
+.input__label {
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -14,12 +14,12 @@
     color: var(--grey-3);
 }
 
-.text-input__wrapper {
+.input__wrapper {
     position: relative;
 }
 
-.text-input__input {
-    padding: 1rem 1.5rem .75rem;
+.input__input {
+    padding: 1rem 3rem .75rem 1.5rem;
     border: 1px solid var(--grey-2);
     border-radius: 8px;
     outline: none;
@@ -31,20 +31,20 @@
     color: var(--grey-4);
 }
 
-.text-input__input:focus {
+.input__input:focus {
     border-color: var(--light-blue);
     box-shadow: 0 1px 1px 0 rgba(var(--blue-shadow), .1);
 }
 
-.text-input__input:disabled {
+.input__input:disabled {
     color: var(--grey-3);
 }
 
-.text-input__input::placeholder {
+.input__input::placeholder {
     color: var(--grey-2);
 }
 
-.text-input__states {
+.input__states {
     position: absolute;
     right: 1rem;
     top: 50%;
@@ -52,25 +52,25 @@
     display: flex;
 }
 
-.text-input__state {
+.input__state {
     width: 1.5rem;
     height: 1.5rem;
     display: none;
 }
 
-.text-input_success .text-input__state_success {
+.input_success .input__state_success {
     display: block;
 }
 
-.text-input_invalid .text-input__state_invalid {
+.input_invalid .input__state_invalid {
     display: block;
 }
 
-.text-input_invalid .text-input__input:not(:focus) {
+.input_invalid .input__input:not(:focus) {
     border-color: var(--error);
     box-shadow: 0 1px 1px 0 rgba(var(--red-shadow), .1);
 }
 
-.text-input__input:focus ~ .text-input__states {
+.input__input:focus ~ .input__states {
     display: none;
 }
