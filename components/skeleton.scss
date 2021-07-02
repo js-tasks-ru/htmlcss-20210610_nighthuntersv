@@ -1,0 +1,51 @@
+.skeleton {
+    border: 1px solid var(--grey-3);
+    border-radius: 8px;
+    background-color: var(--white);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+
+    &__top-area,
+    &__bottom-area {
+        display: flex;
+        align-items: center;
+    }
+
+    &__bottom-area {
+        margin-top: 16px;
+        padding: 8px 0;
+    }
+
+    &__avatar {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background-color: var(--grey-2);
+        margin-right: 16px;
+    }
+
+    &__lines {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    &__line {
+        height: 20px;
+        margin-bottom: 8px;
+        background: linear-gradient(
+            92.51deg, var(--grey-2) 6.44%, #E2E6E8 38.47%, #F3F5F5 56.48%, #E3E7EA 77.5%, var(--grey-2) 102.52%
+        );
+
+        &:last-of-type {
+            margin: 0;
+        }
+    }
+
+    @each $width in (45, 60, 80, 95) {
+        &__line_w#{$width} {
+            width: percentage($width / 100);
+        }
+    }
+}
