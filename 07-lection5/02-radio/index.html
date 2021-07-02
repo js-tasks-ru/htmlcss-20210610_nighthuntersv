@@ -2,10 +2,28 @@
 <!-- Страница радио -->
 <html lang="ru">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
         <link rel="stylesheet" href="../../assets/css/main.css">
+        <link rel="stylesheet" href="../../assets/fonts/fonts.css">
         <link rel="stylesheet" href="./radio.css">
+        <title>07-lection5/02-radio</title>
     </head>
     <body>
-
+        <label class="radio">
+            <input type="radio" class="radio__input" name="group1">
+            <span class="radio__control"></span>
+            <span class="radio__label">Default</span>
+        </label>
+        <label class="radio">
+            <input type="radio" class="radio__input" name="group1" checked>
+            <span class="radio__control"></span>
+            <span class="radio__label">Checked</span>
+        </label>
+        <label class="radio">
+            <input type="radio" class="radio__input" name="group1" disabled>
+            <span class="radio__control"></span>
+            <span class="radio__label">Disabled</span>
+        </label>
     </body>
 </html>
