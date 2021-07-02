@@ -1,0 +1,73 @@
+.toggler {
+    display: inline-flex;
+    align-items: center;
+}
+
+.toggler__input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.toggler__label {
+    margin-left: .75rem;
+    color: var(--grey-4);
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.toggler__input:disabled ~ .toggler__label {
+    color: var(--grey-2);
+}
+
+.toggler__input:focus ~ .toggler__label,
+.toggler__control:active ~ .toggler__label {
+    text-decoration: underline;
+}
+
+.toggler__control {
+    display: inline-flex;
+    width: 3.25rem;
+    height: 1.75rem;
+    border-radius: .875rem;
+    border: 1px solid var(--grey-2);
+    background-color: var(--white);
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.toggler__control::before {
+    content: '';
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 1px auto 1px 1px;
+    border-radius: 50%;
+    background-color: var(--grey-2);
+}
+
+.toggler__input:checked ~ .toggler__control {
+    background-color: var(--light-blue);
+    border-color: var(--light-blue);
+}
+
+.toggler__input:checked ~ .toggler__control::before {
+    margin: 1px 1px 1px auto;
+    background-color: var(--white);
+}
+
+.toggler__input:disabled ~ .toggler__control {
+    background-color: var(--grey-2);
+    pointer-events: none;
+}
+
+.toggler__input:disabled ~ .toggler__control::before {
+    background-color: var(--grey-3);
+}
+
+.toggler__input:focus ~ .toggler__control,
+.toggler__control:active {
+    box-shadow: 0 .25rem .5rem rgba(var(--black-r), var(--black-g), var(--black-b), 0.2);
+}
