@@ -63,5 +63,5 @@
 
 .radio__input:focus ~ .radio__control,
 .radio__control:active {
-    box-shadow: 0 .25rem .5rem rgba(var(--black-r), var(--black-g), var(--black-b), 0.2);
+    box-shadow: 0 .25rem .5rem rgba(var(--black-components), 0.2);
 }
