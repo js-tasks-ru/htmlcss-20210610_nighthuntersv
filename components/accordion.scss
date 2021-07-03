@@ -1,0 +1,52 @@
+@import '../assets/css/mixins.scss';
+
+.accordion {
+
+    &__item {
+        background-color: var(--white);
+        margin-bottom: 8px;
+        border-radius: 8px;
+        border: 1px solid var(--grey-3);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__summary {
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        border-radius: 8px;
+        padding: 24px 32px;
+        cursor: pointer;
+        @include typography();
+
+        &:focus-visible {
+            outline: none;
+            background-color: var(--grey-1);
+        }
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+    }
+
+    &__marker {
+        width: 16px;
+    }
+
+    &__item[open] &__summary {
+        border-radius: 8px 8px 0 0;
+        padding-bottom: 16px;
+    }
+
+    &__item[open] &__marker {
+        transform: rotate(180deg);
+    }
+
+    &__details_text {
+        margin: 0 32px 32px;
+        @include typography(grey-4);
+    }
+}

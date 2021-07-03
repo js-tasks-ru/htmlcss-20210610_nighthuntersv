@@ -1,0 +1,70 @@
+@import '../assets/css/mixins.scss';
+
+.toggler {
+    display: inline-flex;
+    align-items: center;
+
+    &__input {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &__label {
+        margin-left: .75rem;
+        @include typography(grey-4);
+
+        .toggler__input:disabled ~ & {
+            color: var(--grey-2);
+        }
+
+        .toggler__input:focus ~ &,
+        .toggler__control:active ~ & {
+            text-decoration: underline;
+        }
+    }
+
+    &__control {
+        display: inline-flex;
+        width: 3.25rem;
+        height: 1.75rem;
+        border-radius: .875rem;
+        border: 1px solid var(--grey-2);
+        background-color: var(--white);
+        box-sizing: border-box;
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            width: 1.5rem;
+            height: 1.5rem;
+            margin: 1px auto 1px 1px;
+            border-radius: 50%;
+            background-color: var(--grey-2);
+        }
+
+        .toggler__input:checked ~ & {
+            background-color: var(--light-blue);
+            border-color: var(--light-blue);
+
+            &::before {
+                margin: 1px 1px 1px auto;
+                background-color: var(--white);
+            }
+        }
+
+        .toggler__input:disabled ~ & {
+            background-color: var(--grey-2);
+            pointer-events: none;
+
+            &::before {
+                background-color: var(--grey-3);
+            }
+        }
+
+        .toggler__input:focus ~ &,
+        &:active {
+            box-shadow: 0 .25rem .5rem rgba(var(--black-components), .2);
+        }
+    }
+}

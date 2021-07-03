@@ -1,0 +1,40 @@
+@import '../assets/css/mixins.scss';
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+
+    &__icon {
+        width: 22px;
+        height: 22px;
+    }
+
+    &__text {
+        display: none;
+        position: absolute;
+        bottom: calc(100% + 9px);
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 13px 21px 8px;
+        min-width: 100px;
+        text-align: center;
+        background-color: var(--black);
+        box-shadow: 0 2px 4px rgba(var(--black-components), .1);
+        border-radius: 10px;
+        @include typography(grey-2);
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 6px solid transparent;
+            border-top-color: var(--black);
+        }
+
+        .tooltip__icon:hover ~ & {
+            display: block;
+        }
+    }
+}

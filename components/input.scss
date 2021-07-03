@@ -1,0 +1,68 @@
+@import '../assets/css/mixins.scss';
+
+.input {
+    display: inline-flex;
+    flex-direction: column;
+
+    &__label {
+        @include typography(grey-3, .75rem, 1.5, 500);
+        letter-spacing: .04rem;
+        text-transform: uppercase;
+    }
+
+    &__wrapper {
+        position: relative;
+    }
+
+    &__input {
+        padding: 1rem 3rem .75rem 1.5rem;
+        border: 1px solid var(--grey-2);
+        border-radius: 8px;
+        outline: none;
+        @include typography(grey-4, 1.25rem, 1.3);
+
+        &:focus {
+            border-color: var(--light-blue);
+            box-shadow: 0 1px 1px 0 rgba(var(--blue-shadow), .1);
+        }
+
+        &:disabled {
+            color: var(--grey-3);
+        }
+
+        &::placeholder {
+            color: var(--grey-2);
+        }
+    }
+
+    &__states {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+    }
+
+    &__state {
+        width: 1.5rem;
+        height: 1.5rem;
+        display: none;
+    }
+
+    &_success &__state_success {
+        display: block;
+    }
+
+    &_invalid &__state_invalid {
+        display: block;
+    }
+
+    &_invalid &__input:not(:focus) {
+        border-color: var(--error);
+        box-shadow: 0 1px 1px 0 rgba(var(--red-shadow), .1);
+    }
+
+    &__input:focus ~ &__states {
+        display: none;
+    }
+}
