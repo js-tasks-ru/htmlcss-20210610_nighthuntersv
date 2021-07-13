@@ -1,0 +1,22 @@
+@import '../assets/css/mixins.scss';
+
+.footer {
+    padding: 4.5rem 0 8.5rem;
+
+    &_white {
+        background-color: var(--white);
+    }
+
+    &__caption {
+        text-align: center;
+        padding-bottom: 1.5rem;
+        @include typography(black, 2.375rem, 3rem, 500);
+    }
+
+    &__description {
+        max-width: 40rem;
+        margin: 0 auto;
+        text-align: center;
+        @include typography();
+    }
+}

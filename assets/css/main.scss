@@ -1,18 +1,28 @@
-@import "normalize.css";
-@import "reset-css";
+@import 'normalize.css';
+@import 'reset-css';
 
-@import "../fonts/fonts.css";
-@import "main.css";
+@import '../fonts/fonts.css';
+@import 'main.css';
 
-@import "../../components/accordion.scss";
-@import "../../components/avatar.scss";
-@import "../../components/button.scss";
-@import "../../components/calendar.scss";
-@import "../../components/checkbox.scss";
-@import "../../components/histogram.scss";
-@import "../../components/input.scss";
-@import "../../components/modal.scss";
-@import "../../components/radio.scss";
-@import "../../components/skeleton.scss";
-@import "../../components/toggler.scss";
-@import "../../components/tooltip.scss";
+@import '../../components/accordion.scss';
+@import '../../components/avatar.scss';
+@import '../../components/button.scss';
+@import '../../components/calendar.scss';
+@import '../../components/checkbox.scss';
+@import '../../components/histogram.scss';
+@import '../../components/input.scss';
+@import '../../components/modal.scss';
+@import '../../components/radio.scss';
+@import '../../components/skeleton.scss';
+@import '../../components/toggler.scss';
+@import '../../components/tooltip.scss';
+@import '../../components/header.scss';
+@import '../../components/header-shapes.scss';
+@import '../../components/menu.scss';
+@import '../../components/theme-switch.scss';
+@import '../../components/card.scss';
+@import '../../components/grid.scss';
+@import '../../components/tabs.scss';
+@import '../../components/footer.scss';
+
+@import '../../components/page.scss';

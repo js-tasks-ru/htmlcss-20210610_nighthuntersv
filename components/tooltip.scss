@@ -10,7 +10,7 @@
     }
 
     &__text {
-        display: none;
+        opacity: 0;
         position: absolute;
         bottom: calc(100% + 9px);
         left: 50%;
@@ -22,6 +22,7 @@
         box-shadow: 0 2px 4px rgba(var(--black-components), .1);
         border-radius: 10px;
         @include typography(grey-2);
+        transition: opacity .2s ease, bottom .2s linear;
 
         &::after {
             content: '';
@@ -34,7 +35,16 @@
         }
 
         .tooltip__icon:hover ~ & {
-            display: block;
+            opacity: 1;
+            bottom: calc(100% + 13px);
         }
+    }
+
+    &_preview {
+        margin-top: 6rem;
+    }
+
+    &_preview &__text {
+        opacity: 1;
     }
 }

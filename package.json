@@ -5,6 +5,7 @@
   "scripts": {
     "test": "cross-env NODE_ENV=test mocha --no-warnings --ignore=node_modules/** **/*.test.js",
     "build": "postcss assets/css/main.scss -o build/index.css",
+    "watch": "postcss assets/css/main.scss -o build/index.css --watch",
     "fix": "stylelint --fix **/*.scss"
   },
   "husky": {

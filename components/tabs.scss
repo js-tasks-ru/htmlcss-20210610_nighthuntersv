@@ -1,0 +1,109 @@
+@import '../assets/css/mixins.scss';
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &__input {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &__scroller {
+        background-color: var(--white);
+    }
+
+    &__wrapper {
+        display: flex;
+        overflow-x: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    &__tab {
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+        margin-right: 2.5rem;
+        padding-bottom: calc(.5rem + 5px);
+        @include typography(grey-3);
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            border-bottom: 5px solid var(--black);
+            transform: scaleX(0);
+            transition: transform .25s ease-in-out;
+        }
+
+        &:hover {
+            color: var(--black);
+
+            &:after {
+                transform: none;
+            }
+        }
+    }
+
+    &__content-wrapper {
+        flex-grow: 1;
+        border-top: 1px solid var(--grey-2);
+        border-bottom: 1px solid var(--grey-2);
+    }
+
+    &__cards {
+        display: grid;
+        grid-auto-rows: auto;
+        grid-template-columns: 1fr;
+        justify-content: stretch;
+        grid-gap: 30px;
+        padding: 22px 0;
+
+        @media all and (min-width: 768px) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            padding: 53px 0;
+        }
+
+        @media all and (min-width: 1110px) {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            padding: 53px 0;
+        }
+    }
+
+    &__content {
+        display: none;
+    }
+
+    @each $tab in (all, elements, containers, templates) {
+        ##{$tab}-tab:checked ~ &__scroller &__tab[for="#{$tab}-tab"],
+        ##{$tab}-tab:focus ~ &__scroller &__tab[for="#{$tab}-tab"] {
+            color: var(--black);
+
+            &:after {
+                transform: none;
+            }
+        }
+    }
+
+    #all-tab:checked ~ &__content-wrapper &__content {
+        display: flex;
+    }
+    @each $tab in (elements, containers, templates) {
+        ##{$tab}-tab:checked ~ &__content-wrapper &__content_#{$tab} {
+            display: flex;
+        }
+    }
+}

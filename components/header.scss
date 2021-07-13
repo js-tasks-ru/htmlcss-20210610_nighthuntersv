@@ -1,0 +1,53 @@
+@import '../assets/css/mixins.scss';
+
+.header {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.5rem;
+
+    &_white {
+        background-color: var(--white);
+    }
+
+    &__top-line {
+        display: flex;
+        align-items: center;
+        padding: 1.5rem 0;
+    }
+
+    &__shapes {
+        margin: 0 auto;
+
+        @media all and (min-width: 768px) {
+            margin-left: 0;
+        }
+    }
+
+    &__menu {
+        margin-right: 3.5rem;
+        display: none;
+
+        @media all and (min-width: 768px) {
+            display: block;
+        }
+    }
+
+    & &__theme-switch {
+        display: none;
+
+        @media all and (min-width: 768px) {
+            display: flex;
+        }
+    }
+
+    &__title {
+        padding: 1rem 0;
+        @include typography(black, 1.75rem, 2.375rem);
+
+        @media all and (min-width: 768px) {
+            font-size: 3.125rem;
+            line-height: 4rem;
+            font-weight: 500;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.theme-switch {
+    display: flex;
+    align-items: center;
+
+    &__day,
+    &__night {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    &__day,
+    &__toggler {
+        margin-right: 1.5rem;
+    }
+}
