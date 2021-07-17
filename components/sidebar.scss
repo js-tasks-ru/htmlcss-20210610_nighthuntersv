@@ -1,0 +1,5 @@
+.sidebar {
+  &__menu:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
