@@ -48,4 +48,22 @@
             background-color: var(--light-blue);
         }
     }
+
+    &_preview {
+        width: 230px;
+        box-sizing: border-box;
+    }
+
+    &_preview &__cell {
+        font-size: .7rem;
+    }
+
+    &_preview &__body-wrapper {
+        padding-bottom: calc(6 / 7 * 100%);
+    }
+
+    &_preview &__body {
+        grid-auto-rows: auto;
+        grid-template-rows: none;
+    }
 }

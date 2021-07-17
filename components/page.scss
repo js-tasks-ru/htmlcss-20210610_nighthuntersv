@@ -1,0 +1,21 @@
+.page {
+    display: flex;
+    flex-direction: column;
+
+    &__main {
+        flex-grow: 1;
+        background-color: var(--grey-0);
+    }
+
+    &__container {
+        padding: 0 1rem;
+        max-width: 1110px;
+        width: 100%;
+        box-sizing: border-box;
+
+        @media all and (min-width: 1110px) {
+            padding: 0;
+            margin: 0 auto;
+        }
+    }
+}
