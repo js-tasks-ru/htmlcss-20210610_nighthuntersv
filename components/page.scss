@@ -1,21 +1,45 @@
 .page {
     display: flex;
     flex-direction: column;
+    background-color: var(--grey-0);
 
     &__main {
         flex-grow: 1;
-        background-color: var(--grey-0);
+    }
+
+    &__sidebar {
+        display: none;
+
+        @media all and (min-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            width: 270px;
+            margin-top: 3rem;
+        }
+    }
+
+    &__component-area {
+        flex-grow: 1;
+        margin: 0 -1rem;
+
+        @media all and (min-width: 768px) {
+            margin: 3rem 0 0 0;
+        }
     }
 
     &__container {
         padding: 0 1rem;
+        margin: 0 auto;
         max-width: 1110px;
         width: 100%;
         box-sizing: border-box;
 
-        @media all and (min-width: 1110px) {
+        @media all and (min-width: 1142px) {
             padding: 0;
-            margin: 0 auto;
+        }
+
+        &_flex {
+            display: flex;
         }
     }
 }

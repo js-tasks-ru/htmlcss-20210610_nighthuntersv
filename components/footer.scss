@@ -7,6 +7,14 @@
         background-color: var(--white);
     }
 
+    &_alternative {
+        padding: 2rem 0;
+
+        @media all and (min-width: 768px) {
+            padding: 3.5rem 0;
+        }
+    }
+
     &__caption {
         text-align: center;
         padding-bottom: 1.5rem;
@@ -18,5 +26,10 @@
         margin: 0 auto;
         text-align: center;
         @include typography();
+
+        &_alternative {
+            text-transform: uppercase;
+            color: var(--grey-3);
+        }
     }
 }

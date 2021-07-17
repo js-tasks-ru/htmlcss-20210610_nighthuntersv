@@ -1,0 +1,40 @@
+.component-area {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+
+  @media all and (min-width: 768px) {
+    box-shadow: 0 2px 4px rgba(var(--black-components), .05);
+    border-radius: .75rem;
+  }
+
+  &__container {
+    padding: 0 1rem;
+
+    @media all and (min-width: 768px) {
+      padding: 0 3rem;
+    }
+  }
+
+  &__title {
+    padding: 2rem 0;
+    @include typography(grey-4, 1.25rem, 1.3);
+
+    @media all and (min-width: 768px) {
+      font-size: 1.75rem;
+      line-height: 2.375rem;
+    }
+  }
+
+  &__presentation {
+    padding: 0 0 3.25rem;
+
+    @media all and (min-width: 768px) {
+      padding: 1.5rem 0 4rem;
+    }
+  }
+
+  &__code {
+    flex-grow: 1;
+  }
+}

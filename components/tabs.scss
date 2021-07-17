@@ -31,9 +31,13 @@
         align-items: center;
         position: relative;
         cursor: pointer;
-        margin-right: 2.5rem;
+        margin-right: 1.5rem;
         padding-bottom: calc(.5rem + 5px);
         @include typography(grey-3);
+
+        @media all and (min-width: 768px) {
+            margin-right: 2.5rem;
+        }
 
         &:last-of-type {
             margin-right: 0;
@@ -61,7 +65,10 @@
     &__content-wrapper {
         flex-grow: 1;
         border-top: 1px solid var(--grey-2);
-        border-bottom: 1px solid var(--grey-2);
+
+        &_bottom-border {
+            border-bottom: 1px solid var(--grey-2);
+        }
     }
 
     &__cards {
@@ -87,7 +94,7 @@
         display: none;
     }
 
-    @each $tab in (all, elements, containers, templates) {
+    @each $tab in (all, elements, containers, templates, html, css) {
         ##{$tab}-tab:checked ~ &__scroller &__tab[for="#{$tab}-tab"],
         ##{$tab}-tab:focus ~ &__scroller &__tab[for="#{$tab}-tab"] {
             color: var(--black);
@@ -101,7 +108,7 @@
     #all-tab:checked ~ &__content-wrapper &__content {
         display: flex;
     }
-    @each $tab in (elements, containers, templates) {
+    @each $tab in (elements, containers, templates, html, css) {
         ##{$tab}-tab:checked ~ &__content-wrapper &__content_#{$tab} {
             display: flex;
         }
