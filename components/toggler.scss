@@ -33,14 +33,16 @@
         background-color: var(--white);
         box-sizing: border-box;
         cursor: pointer;
+        transition: background-color .5s linear, border-color .5s linear;
 
         &::before {
             content: '';
             width: 1.5rem;
             height: 1.5rem;
-            margin: 1px auto 1px 1px;
+            margin: 1px;
             border-radius: 50%;
             background-color: var(--grey-2);
+            transition: background-color .5s linear, transform .5s ease;
         }
 
         .toggler__input:checked ~ & {
@@ -48,7 +50,7 @@
             border-color: var(--light-blue);
 
             &::before {
-                margin: 1px 1px 1px auto;
+                transform: translateX(1.5rem);
                 background-color: var(--white);
             }
         }

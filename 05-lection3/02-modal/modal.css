@@ -3,7 +3,9 @@
     width: 100vw;
     height: 100vh;
     position: fixed;
-    z-index: 1;
+    top: 0;
+    left: 0;
+    z-index: 1000;
     background-color: rgba(var(--grey-5), 0.5);
 }
 
