@@ -12,9 +12,27 @@
         display: flex;
         align-items: center;
         padding: 1rem 0;
+        position: relative;
 
         @media all and (min-width: 768px) {
             margin-left: 0;
+        }
+    }
+
+    &__burger-menu-icon {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+        cursor: pointer;
+        border-radius: 50%;
+
+        @media all and (min-width: 768px) {
+            display: none !important;
+        }
+
+        &_with-background {
+            background-color: var(--grey-2);
         }
     }
 
