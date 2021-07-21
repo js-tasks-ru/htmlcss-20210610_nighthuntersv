@@ -94,7 +94,7 @@
         display: none;
     }
 
-    @each $tab in (all, elements, containers, templates, html, css) {
+    @each $tab in (all, elements, containers, templates, html, css, js) {
         ##{$tab}-tab:checked ~ &__scroller &__tab[for="#{$tab}-tab"],
         ##{$tab}-tab:focus ~ &__scroller &__tab[for="#{$tab}-tab"] {
             color: var(--black);
@@ -108,7 +108,7 @@
     #all-tab:checked ~ &__content-wrapper &__content {
         display: flex;
     }
-    @each $tab in (elements, containers, templates, html, css) {
+    @each $tab in (elements, containers, templates, html, css, js) {
         ##{$tab}-tab:checked ~ &__content-wrapper &__content_#{$tab} {
             display: flex;
         }

@@ -42,6 +42,7 @@
     "lint-staged": "^10.5.4",
     "normalize.css": "^8.0.1",
     "prettier": "^2.2.1",
+    "rainbow-code": "^2.1.7",
     "reset-css": "^5.0.1"
   }
 }

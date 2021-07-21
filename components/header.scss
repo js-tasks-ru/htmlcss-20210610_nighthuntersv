@@ -3,6 +3,11 @@
 .header {
     display: flex;
     flex-direction: column;
+    padding-top: 4rem;
+
+    @media all and (min-width: 768px) {
+        padding: 0;
+    }
 
     &_white {
         background-color: var(--white);
@@ -11,17 +16,28 @@
     &__top-line {
         display: flex;
         align-items: center;
-        padding: 1rem 0;
-        position: relative;
+        padding: 1rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        background-color: var(--grey-0);
+
+        .header_white & {
+            background-color: var(--white);
+        }
 
         @media all and (min-width: 768px) {
             margin-left: 0;
+            padding: 1rem 0;
+            position: initial;
         }
     }
 
     &__burger-menu-icon {
         position: absolute;
-        left: 0;
+        left: 1rem;
         top: 50%;
         transform: translate(0, -50%);
         cursor: pointer;
@@ -41,6 +57,10 @@
 
         @media all and (min-width: 768px) {
             margin-left: 0;
+        }
+
+        &-svg {
+            display: block;
         }
     }
 

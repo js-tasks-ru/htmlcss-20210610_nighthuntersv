@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../build/index.css">
-        <title>Component page template</title>
+        <link rel="stylesheet" href="../node_modules/rainbow-code/themes/css/github.css">
+        <title>Tooltip</title>
     </head>
     <body class="page">
     <div class="mobile-menu" id="burger-menu">
@@ -104,7 +105,7 @@
             <div class="menu menu_vertical sidebar__menu">
                 <h4 class="menu__caption">Containers</h4>
                 <ul class="menu__items">
-                    <li class="menu__item">
+                    <li class="menu__item menu__item_active">
                         <a class="menu__item-link" href="tooltip.html">Tooltip</a>
                     </li>
                     <li class="menu__item">
@@ -126,11 +127,16 @@
         </aside>
         <div class="component-area page__component-area">
             <div class="component-area__container">
-                <h3 class="component-area__title">Component title</h3>
+                <h3 class="component-area__title">Tooltip</h3>
             </div>
             <div class="component-area__presentation">
-                <div class="component-area__container">
-                    Component preview
+                <div class="component-area__container component-area__container_tooltip">
+                    <div class="tooltip">
+                        <svg viewBox="0 0 24 24" class="tooltip__icon">
+                            <use xlink:href="../assets/images/sprite.svg#icon-help"></use>
+                        </svg>
+                        <div class="tooltip__text">Helper Text</div>
+                    </div>
                 </div>
             </div>
             <div class="tabs">
@@ -149,16 +155,63 @@
                 <div class="tabs__content-wrapper">
                     <div class="component-area__container component-area__container_code">
                         <div class="tabs__content tabs__content_html">
-                            <pre class="component-area__code">
+                            <pre class="component-area__pre">
                                 <code class="component-area__code" data-language="html">
-                                    Component markup
+&lt;div class=&quot;tooltip&quot;&gt;
+    &lt;svg viewBox=&quot;0 0 24 24&quot; class=&quot;tooltip__icon&quot;&gt;
+        &lt;use xlink:href=&quot;../assets/images/sprite.svg#icon-help&quot;&gt;&lt;/use&gt;
+    &lt;/svg&gt;
+    &lt;div class=&quot;tooltip__text&quot;&gt;Helper Text&lt;/div&gt;
+&lt;/div&gt;
                                 </code>
                             </pre>
                         </div>
                         <div class="tabs__content tabs__content_css">
-                            <pre class="component-area__code">
-                                <code class="component-area__code" data-language="html">
-                                    Component styles
+                            <pre class="component-area__pre">
+                                <code class="component-area__code" data-language="css">
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip__icon {
+    width: 22px;
+    height: 22px;
+}
+
+.tooltip__text {
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 9px);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 13px 21px 8px;
+    min-width: 100px;
+    text-align: center;
+    background-color: var(--black);
+    box-shadow: 0 2px 4px rgba(var(--black-components), 0.1);
+    border-radius: 10px;
+    color: var(--grey-2);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Inter', sans-serif;
+}
+
+.tooltip__icon:hover ~ .tooltip__text {
+    display: block;
+}
+
+.tooltip__text:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: var(--black);
+}
                                 </code>
                             </pre>
                         </div>
@@ -174,6 +227,7 @@
             </h5>
         </div>
     </footer>
+    <script src="../node_modules/rainbow-code/dist/rainbow.min.js"></script>
     <script defer src="../09-lection7/01-burger-menu/burger-menu.js"></script>
     </body>
 </html>

@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   background-color: var(--white);
+  overflow: hidden;
 
   @media all and (min-width: 768px) {
     box-shadow: 0 2px 4px rgba(var(--black-components), .05);
@@ -11,8 +12,20 @@
   &__container {
     padding: 0 1rem;
 
+    &_code {
+      padding: 1rem;
+    }
+
+    &_tooltip {
+      margin: 4rem 4.5rem 0;
+    }
+
     @media all and (min-width: 768px) {
       padding: 0 3rem;
+
+      &_code {
+        padding: 3rem;
+      }
     }
   }
 
@@ -34,7 +47,18 @@
     }
   }
 
+  &__pre {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    border: none;
+    background-color: var(--white);
+    overflow-x: auto;
+  }
+
   &__code {
-    flex-grow: 1;
+    border: none;
+    background-color: var(--white);
   }
 }

@@ -8,17 +8,68 @@
         <title>Reusable component library</title>
     </head>
     <body class="page">
+        <div class="mobile-menu" id="burger-menu">
+            <div class="page__container">
+                <div class="menu menu_vertical mobile-menu__group">
+                    <h4 class="menu__caption">Elements</h4>
+                    <ul class="menu__items">
+                        <li class="menu__item">
+                            <a class="menu__item-link" href="pages/forms.html">Custom form elements</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__item-link" href="pages/avatar.html">Avatar</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu menu_vertical mobile-menu__group">
+                    <h4 class="menu__caption">Containers</h4>
+                    <ul class="menu__items">
+                        <li class="menu__item">
+                            <a class="menu__item-link" href="pages/tooltip.html">Tooltip</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__item-link" href="pages/modal.html">Modal dialog</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu menu_vertical mobile-menu__group">
+                    <h4 class="menu__caption">Templates</h4>
+                    <ul class="menu__items">
+                        <li class="menu__item">
+                            <a class="menu__item-link" href="pages/calendar.html">Calendar</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__item-link" href="pages/histogram.html">Histogram</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <header class="header header_white page__header">
             <div class="page__container">
                 <div class="header__top-line">
-                    <svg class="header__shapes" width="110" height="32" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect y="1" width="30" height="30" fill="#212429"/>
-                        <rect x="38" width="32" height="32" rx="16" fill="#212429"/>
-                        <path d="M78 0L110 32H78V0Z" fill="#212429"/>
-                    </svg>
+                    <div class="mobile-menu__open header__burger-menu-icon" id="burger-menu-open">
+                        <svg class="mobile-menu__icon" viewBox="0 0 24 24">
+                            <use xlink:href="./assets/images/sprite.svg#icon-burger"></use>
+                        </svg>
+                    </div>
+                    <div class="mobile-menu__close header__burger-menu-icon header__burger-menu-icon_with-background" id="burger-menu-close">
+                        <svg class="mobile-menu__icon" viewBox="0 0 24 24">
+                            <use xlink:href="./assets/images/sprite.svg#icon-close"></use>
+                        </svg>
+                    </div>
+                    <a class="header__shapes" href="index.html">
+                        <svg class="header__shapes-svg" width="110" height="32" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect y="1" width="30" height="30" fill="#212429"/>
+                            <rect x="38" width="32" height="32" rx="16" fill="#212429"/>
+                            <path d="M78 0L110 32H78V0Z" fill="#212429"/>
+                        </svg>
+                    </a>
                     <div class="menu menu_horizontal header__menu">
                         <ul class="menu__items">
-                            <li class="menu__item menu__item_active">Components</li>
+                            <li class="menu__item menu__item_active">
+                                <a class="menu__item-link" href="index.html">Components</a>
+                            </li>
                             <li class="menu__item">About</li>
                             <li class="menu__item">Contact</li>
                         </ul>
@@ -75,7 +126,6 @@
                             <div class="card tabs__content tabs__content_elements">
                                 <div class="card__body">
                                     <div class="grid grid_2col">
-
                                         <label class="checkbox">
                                             <input type="checkbox" class="checkbox__input">
                                             <span class="checkbox__control">
@@ -277,5 +327,6 @@
                 </p>
             </div>
         </footer>
+        <script defer src="./09-lection7/01-burger-menu/burger-menu.js"></script>
     </body>
 </html>
